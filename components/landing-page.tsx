@@ -104,7 +104,7 @@ export function LandingPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold mb-4">インタラクティブな振り返り</h3>
-                <p className="text-gray-600">AIアバターとの対話を通じて、学習内容を効果的に定着させます</p>
+                <p className="text-gray-600">AIアバターとの対話を通じて、学びの言語化・気づきを促します</p>
               </CardContent>
               <Button className="mt-4 w-full">詳細を見る</Button>
             </Card>
@@ -153,7 +153,7 @@ export function LandingPage() {
       <section id="solutions" className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
-            当社が提案するソリューション
+            我々が提案するソリューションのコンセプト
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <Card>
