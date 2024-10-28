@@ -344,13 +344,13 @@ export function LandingPage() {
             <AccordionItem value="item-1">
               <AccordionTrigger>サービスの利用料金はいくらですか？</AccordionTrigger>
               <AccordionContent>
-                基本プランは月額3,000円からご利用いただけます。詳細な料金プランについては、上記の料金プラン表をご確認ください。
+                基本プランは月額500円でご利用いただけます。まずは無料プランからお試しいただくことが可能です。詳細な料金プランについては、上記の料金プラン表をご確認ください。
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
-              <AccordionTrigger>どのような学習コンテンツが提供されていますか？</AccordionTrigger>
+              <AccordionTrigger>どのような学習コンテンツを取り扱っていますか？</AccordionTrigger>
               <AccordionContent>
-                ビジネススキル、語学、プログラミングなど、幅広い分野のコンテンツを提供しています。AIが個々のニーズに合わせて最適なコンテンツを推奨します。
+                ビジネススキル、語学、プログラミングなど、幅広い分野のコンテンツからレコメンドを行います。AIが個々のニーズに合わせて最適なコンテンツを推奨します。
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
@@ -446,13 +446,13 @@ export function LandingPage() {
           <div className="flex items-center justify-between p-4 border-b">
             <div className="flex items-center">
               <Image
-                src="/placeholder.svg"
-                alt="AI Avatar"
+                src="/customer-support-demo.png"
+                alt="サポートセンター"
                 width={32}
                 height={32}
                 className="w-8 h-8 rounded-full"
               />
-              <span className="ml-2 font-semibold">学習サポートAI</span>
+              <span className="ml-2 font-semibold">カスタマーサポート</span>
             </div>
             <Button variant="ghost" size="icon" onClick={toggleChat}>
               <X className="w-6 h-6 text-gray-500 hover:text-gray-700" />
