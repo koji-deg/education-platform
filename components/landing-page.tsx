@@ -200,9 +200,15 @@ export function LandingPage() {
             性格診断＋学習サービスレコメンド
           </CardTitle>
         </CardHeader>
-        <CardContent className="flex-grow">
-          <Image src="/seikaku-demo.png?height=200&width=400&text=Thumbnail" alt="学習サービスレコメンド" width={400} height={200} className="rounded-lg mb-4" />
-          <CardDescription>
+        <CardContent className="flex-grow flex flex-col items-center">
+          <Image 
+            src="/seikaku-demo.png?height=200&width=400&text=Thumbnail"
+            alt="学習サービスレコメンド"
+            width={400}
+            height={200}
+            className="rounded-lg object-cover mb-4"
+          />
+          <CardDescription className="text-center">
             性格診断結果をもとにAIがあなたに合った学習方法・サービスを提案します。興味や目標に合致するパーソナライズされた推奨を今後実装予定です。
           </CardDescription>
         </CardContent>
@@ -218,9 +224,15 @@ export function LandingPage() {
             振り返り支援AI
           </CardTitle>
         </CardHeader>
-        <CardContent className="flex-grow">
-          <Image src="/furikaeri-demo.png?height=200&width=400&text=Thumbnail" alt="振り返り支援AI" width={400} height={200} className="rounded-lg mb-4" />
-          <CardDescription>
+        <CardContent className="flex-grow flex flex-col items-center">
+          <Image 
+            src="/furikaeri-demo.png?height=200&width=400&text=Thumbnail"
+            alt="振り返り支援AI"
+            width={400}
+            height={200}
+            className="rounded-lg object-cover mb-4"
+          />
+          <CardDescription className="text-center">
             AIアバターとの対話を通じて、学習内容を効果的に復習し、理解を深めます。インタラクティブな振り返りを体験してください。
           </CardDescription>
         </CardContent>
@@ -236,9 +248,15 @@ export function LandingPage() {
             学習エンゲージメントサーベイ
           </CardTitle>
         </CardHeader>
-        <CardContent className="flex-grow">
-          <Image src="/learning_engagement-demo.png?height=200&width=400&text=Thumbnail" alt="学習エンゲージメントサーベイ" width={400} height={200} className="rounded-lg mb-4" />
-          <CardDescription>
+        <CardContent className="flex-grow flex flex-col items-center">
+          <Image 
+            src="/learning_engagement-demo.png?height=200&width=400&text=Thumbnail"
+            alt="学習エンゲージメントサーベイ"
+            width={400}
+            height={200}
+            className="rounded-lg object-cover mb-4"
+          />
+          <CardDescription className="text-center">
             あなたの学習エンゲージメントを定期的に測定・可視化します。データに基づいた学習改善のヒントを得られます。
           </CardDescription>
         </CardContent>
@@ -254,9 +272,15 @@ export function LandingPage() {
             学習支援AIラジオ
           </CardTitle>
         </CardHeader>
-        <CardContent className="flex-grow">
-          <Image src="/study_support_radio-demo.png?height=200&width=400&text=Thumbnail" alt="学習支援AIラジオ" width={400} height={200} className="rounded-lg mb-4" />
-          <CardDescription>
+        <CardContent className="flex-grow flex flex-col items-center">
+          <Image 
+            src="/study_support_radio-demo.png?height=200&width=400&text=Thumbnail"
+            alt="学習支援AIラジオ"
+            width={400}
+            height={200}
+            className="rounded-lg object-cover mb-4"
+          />
+          <CardDescription className="text-center">
             AIがパーソナライズされた学習コンテンツをラジオ形式で提供します。移動中や作業中にも効率的に学習できます。
           </CardDescription>
         </CardContent>
@@ -267,6 +291,7 @@ export function LandingPage() {
     </div>
   </div>
 </section>
+
 
       {/* お客様の声 
       <section id="reviews" className="py-20 bg-white">
