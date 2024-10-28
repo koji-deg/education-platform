@@ -6,8 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { MessageCircle, X, Send, ChevronDown, Menu, Star, Download, Phone, BookOpen, Brain, BarChart, Radio } from 'lucide-react'
+import { MessageCircle, X, Send, ChevronDown, Menu, Download, Phone, BookOpen, Brain, BarChart, Radio } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -28,7 +27,7 @@ export function LandingPage() {
     // AI応答のシミュレーション
     setTimeout(() => {
       setMessages(prev => [...prev, { 
-        text: "学びの振り返りをサポートさせていただきます。今日の学習内容について教えていただけますか？", 
+        text: "これはテストメッセージです", 
         sender: 'ai' 
       }])
     }, 1000)
@@ -61,6 +60,7 @@ export function LandingPage() {
         </div>
       </header>
 
+      {/* 特徴セクション */}
       <section id="features" className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
