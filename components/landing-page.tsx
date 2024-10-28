@@ -305,36 +305,6 @@ export function LandingPage() {
 </section>
 
 
-      {/* お客様の声 
-      <section id="reviews" className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
-            お客様の声
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
-              <Card key={i}>
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <Image src={`/placeholder.svg?height=40&width=40&text=User ${i}`} alt={`User ${i}`} width={40} height={40} className="rounded-full mr-4" />
-                    <div>
-                      <h4 className="font-semibold">User {i}</h4>
-                      <div className="flex text-yellow-400">
-                        {[...Array(5)].map((_, index) => (
-                          <Star key={index} className="w-4 h-4 fill-current" />
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                  <p className="text-gray-600">「AIアバターとの対話で、学習がより楽しくなりました。継続的に学習を続けられています。」</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-      */}
-
       {/* 料金プラン */}
       <section id="pricing" className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
@@ -391,20 +361,6 @@ export function LandingPage() {
         </div>
       </section>
 
-      {/* メディア掲載・受賞歴 
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
-            メディア掲載・受賞歴
-          </h2>
-          <div className="flex flex-wrap justify-center items-center gap-8">
-            {[1, 2, 3, 4].map((i) => (
-              <Image key={i} src={`/placeholder.svg?height=60&width=120&text=Media ${i}`} alt={`Media ${i}`} width={120} height={60} />
-            ))}
-          </div>
-        </div>
-      </section>
-      */}
 
       {/* CTAセクション */}
       <section className="py-20 bg-teal-50">
