@@ -29,7 +29,8 @@ export function LandingPage() {
     // メッセージが空の場合は処理を中断
     if (!message.trim()) return;
 
-    // ユーザーのメッセージを追加し、入力フィールドをリセット
+    // デモ版のためメッセージ処理部分をコメントアウト
+    /*
     setMessages((prevMessages) => [
       ...prevMessages,
       { text: message.trim(), sender: 'user' }
@@ -43,6 +44,7 @@ export function LandingPage() {
         { text: 'これはテストメッセージです', sender: 'ai' }
       ]);
     }, 1000);
+    */
   };
 
   return (
@@ -438,26 +440,27 @@ export function LandingPage() {
       </Button>
 
       {/* チャットウィンドウ */}
-{chatOpen && (
-  <Card className="fixed right-6 bottom-24 w-96 h-[600px] bg-white rounded-lg shadow-xl flex flex-col z-40">
-    {/* チャットヘッダー */}
-    <div className="flex items-center justify-between p-4 border-b">
-      <div className="flex items-center">
-        <Image
-          src="/placeholder.svg"
-          alt="AI Avatar"
-          width={32}
-          height={32}
-          className="w-8 h-8 rounded-full"
-        />
-        <span className="ml-2 font-semibold">学習サポートAI</span>
-      </div>
-      <Button variant="ghost" size="icon" onClick={toggleChat}>
-        <X className="w-6 h-6 text-gray-500 hover:text-gray-700" />
-      </Button>
-    </div>
+      {chatOpen && (
+        <Card className="fixed right-6 bottom-24 w-96 h-[600px] bg-white rounded-lg shadow-xl flex flex-col z-40">
+          {/* チャットヘッダー */}
+          <div className="flex items-center justify-between p-4 border-b">
+            <div className="flex items-center">
+              <Image
+                src="/placeholder.svg"
+                alt="AI Avatar"
+                width={32}
+                height={32}
+                className="w-8 h-8 rounded-full"
+              />
+              <span className="ml-2 font-semibold">学習サポートAI</span>
+            </div>
+            <Button variant="ghost" size="icon" onClick={toggleChat}>
+              <X className="w-6 h-6 text-gray-500 hover:text-gray-700" />
+            </Button>
+          </div>
 
-          {/* メッセージエリア */}
+          {/* メッセージエリア（デモ版のためコメントアウト） */}
+          {/*
           <div className="flex-1 overflow-y-auto p-4 space-y-4">
             {messages.map((msg, index) => (
               <div
@@ -476,6 +479,7 @@ export function LandingPage() {
               </div>
             ))}
           </div>
+          */}
 
           {/* 入力エリア */}
           <form onSubmit={sendMessage} className="p-4 border-t flex items-center">
