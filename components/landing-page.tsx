@@ -10,34 +10,40 @@ import { MessageCircle, X, Send, ChevronDown, Menu, Download, Phone, BookOpen, B
 import Link from 'next/link'
 import Image from 'next/image'
 
-export function LandingPage() {
-  const [chatOpen, setChatOpen] = useState(false)
-  const [message, setMessage] = useState('')
-  const [messages, setMessages] = useState([])
+// Message型を定義
+interface Message {
+  text: string;
+  sender: 'user' | 'ai';
+}
 
-  const toggleChat = () => setChatOpen(!chatOpen)
+export function LandingPage() {
+  const [chatOpen, setChatOpen] = useState(false);
+  const [message, setMessage] = useState('');
+  const [messages, setMessages] = useState<Message[]>([]);
+
+  const toggleChat = () => setChatOpen(!chatOpen);
 
   const sendMessage = (e: React.FormEvent) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  // メッセージが空の場合は処理を中断
-  if (!message.trim()) return;
+    // メッセージが空の場合は処理を中断
+    if (!message.trim()) return;
 
-  // ユーザーのメッセージを追加し、入力フィールドをリセット
-  setMessages((prevMessages) => [
-    ...prevMessages,
-    { text: message.trim(), sender: 'user' }
-  ]);
-  setMessage('');
-
-  // AI応答のシミュレーションを1秒後に追加
-  setTimeout(() => {
+    // ユーザーのメッセージを追加し、入力フィールドをリセット
     setMessages((prevMessages) => [
       ...prevMessages,
-      { text: 'これはテストメッセージです', sender: 'ai' }
+      { text: message.trim(), sender: 'user' }
     ]);
-  }, 1000);
-};
+    setMessage('');
+
+    // AI応答のシミュレーションを1秒後に追加
+    setTimeout(() => {
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        { text: 'これはテストメッセージです', sender: 'ai' }
+      ]);
+    }, 1000);
+  };
 
   return (
     <div className="relative min-h-screen bg-gray-50">
@@ -476,22 +482,24 @@ export function LandingPage() {
       </Button>
 
       {/* チャットウィンドウ */}
-      {chatOpen && (
-        <Card className="fixed right-6 bottom-24 w-96 h-[600px] bg-white rounded-lg shadow-xl flex flex-col z-40">
-          {/* チャットヘッダー */}
-          <div className="flex items-center justify-between p-4 border-b">
-            <div className="flex items-center">
-              <img
-                src="/placeholder.svg?height=32&width=32"
-                alt="AI Avatar"
-                className="w-8 h-8 rounded-full"
-              />
-              <span className="ml-2 font-semibold">学習サポートAI</span>
-            </div>
-            <Button variant="ghost" size="icon" onClick={toggleChat}>
-              <X className="w-6 h-6 text-gray-500 hover:text-gray-700" />
-            </Button>
-          </div>
+{chatOpen && (
+  <Card className="fixed right-6 bottom-24 w-96 h-[600px] bg-white rounded-lg shadow-xl flex flex-col z-40">
+    {/* チャットヘッダー */}
+    <div className="flex items-center justify-between p-4 border-b">
+      <div className="flex items-center">
+        <Image
+          src="/placeholder.svg"
+          alt="AI Avatar"
+          width={32}
+          height={32}
+          className="w-8 h-8 rounded-full"
+        />
+        <span className="ml-2 font-semibold">学習サポートAI</span>
+      </div>
+      <Button variant="ghost" size="icon" onClick={toggleChat}>
+        <X className="w-6 h-6 text-gray-500 hover:text-gray-700" />
+      </Button>
+    </div>
 
           {/* メッセージエリア */}
           <div className="flex-1 overflow-y-auto p-4 space-y-4">
