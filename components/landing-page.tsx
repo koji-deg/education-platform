@@ -18,20 +18,26 @@ export function LandingPage() {
   const toggleChat = () => setChatOpen(!chatOpen)
 
   const sendMessage = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!message.trim()) return
-    
-    setMessages([...messages, { text: message, sender: 'user' }])
-    setMessage('')
-    
-    // AI応答のシミュレーション
-    setTimeout(() => {
-      setMessages(prev => [...prev, { 
-        text: "これはテストメッセージです", 
-        sender: 'ai' 
-      }])
-    }, 1000)
-  }
+  e.preventDefault();
+
+  // メッセージが空の場合は処理を中断
+  if (!message.trim()) return;
+
+  // ユーザーのメッセージを追加し、入力フィールドをリセット
+  setMessages((prevMessages) => [
+    ...prevMessages,
+    { text: message.trim(), sender: 'user' }
+  ]);
+  setMessage('');
+
+  // AI応答のシミュレーションを1秒後に追加
+  setTimeout(() => {
+    setMessages((prevMessages) => [
+      ...prevMessages,
+      { text: 'これはテストメッセージです', sender: 'ai' }
+    ]);
+  }, 1000);
+};
 
   return (
     <div className="relative min-h-screen bg-gray-50">
