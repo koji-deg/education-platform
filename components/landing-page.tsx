@@ -11,15 +11,15 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 // Message型を定義
-interface Message {
-  text: string;
-  sender: 'user' | 'ai';
-}
+// interface Message {
+//   text: string;
+//   sender: 'user' | 'ai';
+// }
 
 export function LandingPage() {
   const [chatOpen, setChatOpen] = useState(false);
   const [message, setMessage] = useState('');
-  const [messages, setMessages] = useState<Message[]>([]);
+  // const [messages, setMessages] = useState<Message[]>([]);
 
   const toggleChat = () => setChatOpen(!chatOpen);
 

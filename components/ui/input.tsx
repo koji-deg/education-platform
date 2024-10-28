@@ -1,9 +1,11 @@
-import * as React from "react"
+﻿import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
-export interface InputProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {}
+// プロパティの例を追加
+export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  placeholder?: string; // 例として placeholder を追加
+}
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, ...props }, ref) => {
