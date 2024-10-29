@@ -320,13 +320,12 @@ export function LandingPage() {
             ご回答いただいた内容をもとに、サービスの改善を検討させていただきます
           </p>
         </CardContent>
-        <Button className="w-auto mx-auto mt-4 mb-4" asChild>
-          <Link href="https://forms.gle/hmQM87GD6pMrwLhF8/">アンケートに回答する</Link>
-        </Button>
+        <div className="flex justify-center mb-4">
+          <Button className="w-auto mt-4" asChild>
+            <Link href="https://forms.gle/hmQM87GD6pMrwLhF8/">アンケートに回答する</Link>
+          </Button>
+        </div>
       </Card>
-    </div>
-  </div>
-</section>
 
       {/* 料金プラン */}
       <section id="pricing" className="py-20 bg-gray-50">
