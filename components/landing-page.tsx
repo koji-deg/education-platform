@@ -307,24 +307,26 @@ export function LandingPage() {
 </section>
 
        {/* フィードバック */}
-      <section id="problems" className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
-            フィードバックにご協力ください
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-4">アンケート</h3>
-                <p className="text-gray-600">ご回答いただいた内容をもとに、サービスの改善を検討させていただきます</p>
-              </CardContent>
-              <Button className="w-auto mx-auto mt-4 mb-4" asChild>
+<section id="problems" className="py-20 bg-white">
+  <div className="container mx-auto px-6">
+    <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
+      フィードバックにご協力ください
+    </h2>
+    <div className="flex justify-center">
+      <Card>
+        <CardContent className="p-6 text-center">
+          <h3 className="text-xl font-semibold mb-4">アンケート</h3>
+          <p className="text-gray-600">
+            ご回答いただいた内容をもとに、サービスの改善を検討させていただきます
+          </p>
+        </CardContent>
+        <Button className="w-auto mx-auto mt-4 mb-4" asChild>
           <Link href="https://forms.gle/hmQM87GD6pMrwLhF8/">アンケートに回答する</Link>
         </Button>
-            </Card>
-          </div>
-        </div>
-      </section>
+      </Card>
+    </div>
+  </div>
+</section>
 
       {/* 料金プラン */}
       <section id="pricing" className="py-20 bg-gray-50">
